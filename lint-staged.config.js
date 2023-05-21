@@ -1,5 +1,4 @@
-export default {
-
+module.exports = {
     // Type check TypeScript files
     '**/*.(ts|tsx)': () => 'pnpm tsc --noEmit',
   
@@ -13,3 +12,4 @@ export default {
     '**/*.(md|json)': (filenames) =>
       `pnpm prettier --write ${filenames.join(' ')}`,
   }
+  
