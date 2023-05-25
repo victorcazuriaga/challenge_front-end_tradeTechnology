@@ -1,6 +1,7 @@
 import { AxiosStatusResponse } from '../types/footballApi'
 import footballApi from './footballApi'
 const authenticate = async (apiKey: string) => {
+    console.log(apiKey)
     const { data } = await footballApi<any, AxiosStatusResponse>({
         url: '/status',
         method: 'GET',

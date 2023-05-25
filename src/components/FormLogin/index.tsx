@@ -2,7 +2,7 @@ import authenticate from '../../shared/services/authentication'
 import { IFormInput } from '../../shared/types/FormLogin'
 import { ContainerLogin } from './style'
 import { useForm, SubmitHandler } from 'react-hook-form'
-export const FormLogin = () => {
+export const FormLogin: React.FC = () => {
     const { register, handleSubmit } = useForm<IFormInput>()
     const onSubmit: SubmitHandler<IFormInput> = async (data) => {
         const isAuthenticated = await authenticate(data.apikey)
@@ -35,7 +35,7 @@ export const FormLogin = () => {
                     id="login"
                     className="form_login_input"
                     placeholder=" Digite sua Api key"
-                    {...register('apikey')}
+                    {...register('apikey', { required: true })}
                 />
                 <div className="form_login_checkbox">
                     <input type="checkbox" />
