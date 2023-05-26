@@ -1,18 +1,18 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { useTable, Column } from 'react-table'
 
-interface TeamStatistics {
-    team: string
-    season: string
-    league: string
-}
+// interface TeamStatistics {
+//     team: string
+//     season: string
+//     league: string
+// }
 
-interface StatisticsData {
-    totalWins: number
-    totalLosses: number
-    totalDraws: number
-    totalMatches: number
-}
+// interface StatisticsData {
+//     totalWins: number
+//     totalLosses: number
+//     totalDraws: number
+//     totalMatches: number
+// }
 
 export const ResultsTable = () => {
     const [data, setData] = useState<StatisticsData[]>([])

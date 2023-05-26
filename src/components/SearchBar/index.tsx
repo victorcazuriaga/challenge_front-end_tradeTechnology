@@ -1,5 +1,3 @@
-import { useQuery } from '@tanstack/react-query'
-import getCountries from '../../shared/services/getCountries'
 import {
     ContainerSearchBar,
     LabelSearchBar,
@@ -20,8 +18,8 @@ export const SearchBar = ({ countries }: any) => {
         team: null,
         season: null,
     })
-    const [time, setTimes] = useState([])
-    useEffect((): void => {}, [time, league, seasson])
+    const [team, setTeam] = useState([])
+    useEffect((): void => {}, [team, league, seasson])
 
     const handleCountryChange = async (
         event: React.ChangeEvent<HTMLSelectElement>
@@ -60,7 +58,7 @@ export const SearchBar = ({ countries }: any) => {
             Number(selectedData.league),
             Number(selectedData.season)
         )
-        setTimes(teams)
+        setTeam(teams)
     }
     const handleTeamChange = async (
         event: React.ChangeEvent<HTMLSelectElement>
@@ -111,10 +109,10 @@ export const SearchBar = ({ countries }: any) => {
                 <LabelSearchBar>Times</LabelSearchBar>
                 <Select
                     onChange={handleTeamChange}
-                    disabled={isListEmpty(time)}
+                    disabled={isListEmpty(team)}
                 >
                     <option value="default"></option>
-                    {time?.map(({ team }: any) => (
+                    {team?.map(({ team }: any) => (
                         <option key={team.id} value={team.id}>
                             {' '}
                             {team.name}
