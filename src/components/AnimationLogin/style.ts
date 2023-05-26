@@ -27,7 +27,8 @@ export const ContainerAnimationLogin = styled.div`
     }
     .animation {
         display: flex;
-        flex: 3;
+        flex: 2;
+        justify-content: center;
     }
 
     @media (min-width: 680px) {

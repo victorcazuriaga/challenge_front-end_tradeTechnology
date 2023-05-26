@@ -4,6 +4,7 @@ import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 import { SearchBar } from '../../components/SearchBar'
 import getCountries from '../../shared/services/getCountries'
+import { ContainerHomePage } from './style'
 
 export const HomePage = () => {
     const { data, isError, isLoading } = useQuery(
@@ -14,14 +15,7 @@ export const HomePage = () => {
         { cacheTime: 50000 }
     )
     return (
-        <div
-            style={{
-                display: 'flex',
-                height: '100vh',
-                justifyContent: 'space-between',
-                flexDirection: 'column',
-            }}
-        >
+        <ContainerHomePage>
             <Header
                 onLogout={function (): void {
                     throw new Error('Function not implemented.')
@@ -30,6 +24,6 @@ export const HomePage = () => {
             <SearchBar countries={data} />
             <ContentDisplay />
             <Footer />
-        </div>
+        </ContainerHomePage>
     )
 }

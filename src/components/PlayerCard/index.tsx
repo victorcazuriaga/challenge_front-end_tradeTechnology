@@ -1,4 +1,4 @@
-import { CardContainer, PlayerInfo, PlayerName, PlayerPhoto } from './styled'
+import { CardContainer, PlayerInfo, PlayerName, PlayerPhoto } from './style'
 
 export const PlayerCard = ({ player }: any) => {
     const { name, age, position, photoUrl, nationality } = player
