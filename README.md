@@ -22,13 +22,7 @@ Nosso cliente José Gustavo, apaixonado por futebol e tecnologia, encontrou uma 
 
 ## Como Executar o Projeto
 
-1. Clone o repositório
-2. [Instruções de configuração do ambiente]
-3. [Instruções de instalação das dependências]
-4. [Instruções de execução da aplicação]
-
-
-### Executando Docker
+### Executando com Docker
 
 1. Clone o repositório
 2. executa o comando docker compose build
